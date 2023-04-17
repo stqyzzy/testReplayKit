@@ -65,6 +65,10 @@
 
 #pragma mark -
 #pragma mark - private methods
+- (void)createSenderBufferWithSize:(NSInteger)bufferSize {
+    
+}
+
 - (void)initializeEncoder {
     self.encoder = [Encoder new];
 }
