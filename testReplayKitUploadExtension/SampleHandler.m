@@ -7,11 +7,23 @@
 
 
 #import "SampleHandler.h"
+#import "Encoder.h"
+
 // Broadcast Upload Extension是在录制配置界面完成后，在录制期间触发事件回调和录制的音视频数据回调，开发者可以在此回调中处理逻辑。
+@interface SampleHandler ()
+@property (nonatomic, strong) Encoder *encoder;
+@end
+
 @implementation SampleHandler
 
+#pragma mark -
+#pragma mark - init setup - 初始化
+
 - (void)broadcastStartedWithSetupInfo:(NSDictionary<NSString *,NSObject *> *)setupInfo {
-    // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional. 
+    // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional.
+    NSInteger bufferSize = 30;
+    
+    [self initializeEncoder];
 }
 
 - (void)broadcastPaused {
@@ -43,5 +55,22 @@
             break;
     }
 }
+
+#pragma mark -
+#pragma mark - public methods
+
+
+#pragma mark -
+#pragma mark - <#custom#> Delegate
+
+#pragma mark -
+#pragma mark - private methods
+- (void)initializeEncoder {
+    self.encoder = [Encoder new];
+}
+#pragma mark -
+#pragma mark - getters and setters
+
+
 
 @end
