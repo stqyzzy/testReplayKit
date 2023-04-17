@@ -17,6 +17,14 @@
 		53C51B3B29ED47B6002CE389 /* testReplayKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B3A29ED47B6002CE389 /* testReplayKitTests.m */; };
 		53C51B4529ED47B6002CE389 /* testReplayKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B4429ED47B6002CE389 /* testReplayKitUITests.m */; };
 		53C51B4729ED47B6002CE389 /* testReplayKitUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B4629ED47B6002CE389 /* testReplayKitUITestsLaunchTests.m */; };
+		53C51B5A29ED4CFB002CE389 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C51B5929ED4CFB002CE389 /* ReplayKit.framework */; };
+		53C51B5E29ED4CFB002CE389 /* SampleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B5D29ED4CFB002CE389 /* SampleHandler.m */; };
+		53C51B6529ED4CFC002CE389 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C51B5929ED4CFB002CE389 /* ReplayKit.framework */; };
+		53C51B6729ED4CFC002CE389 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C51B6629ED4CFC002CE389 /* UIKit.framework */; };
+		53C51B6B29ED4CFC002CE389 /* BroadcastSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B6A29ED4CFC002CE389 /* BroadcastSetupViewController.m */; };
+		53C51B6F29ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 53C51B6429ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		53C51B7229ED4CFC002CE389 /* testReplayKitUploadExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 53C51B5729ED4CFB002CE389 /* testReplayKitUploadExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		53C51B7C29ED5437002CE389 /* Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B7B29ED5437002CE389 /* Encoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +42,36 @@
 			remoteGlobalIDString = 53C51B1A29ED47B4002CE389;
 			remoteInfo = testReplayKit;
 		};
+		53C51B6D29ED4CFC002CE389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53C51B1329ED47B4002CE389 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53C51B6329ED4CFC002CE389;
+			remoteInfo = testReplayKitUploadExtensionSetupUI;
+		};
+		53C51B7029ED4CFC002CE389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53C51B1329ED47B4002CE389 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53C51B5629ED4CFB002CE389;
+			remoteInfo = testReplayKitUploadExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53C51B7929ED4CFC002CE389 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				53C51B6F29ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI.appex in Embed Foundation Extensions */,
+				53C51B7229ED4CFC002CE389 /* testReplayKitUploadExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		53C51B1B29ED47B4002CE389 /* testReplayKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testReplayKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +91,18 @@
 		53C51B4029ED47B6002CE389 /* testReplayKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testReplayKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C51B4429ED47B6002CE389 /* testReplayKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testReplayKitUITests.m; sourceTree = "<group>"; };
 		53C51B4629ED47B6002CE389 /* testReplayKitUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testReplayKitUITestsLaunchTests.m; sourceTree = "<group>"; };
+		53C51B5729ED4CFB002CE389 /* testReplayKitUploadExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = testReplayKitUploadExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C51B5929ED4CFB002CE389 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		53C51B5C29ED4CFB002CE389 /* SampleHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleHandler.h; sourceTree = "<group>"; };
+		53C51B5D29ED4CFB002CE389 /* SampleHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleHandler.m; sourceTree = "<group>"; };
+		53C51B5F29ED4CFB002CE389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53C51B6429ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = testReplayKitUploadExtensionSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C51B6629ED4CFC002CE389 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		53C51B6929ED4CFC002CE389 /* BroadcastSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BroadcastSetupViewController.h; sourceTree = "<group>"; };
+		53C51B6A29ED4CFC002CE389 /* BroadcastSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BroadcastSetupViewController.m; sourceTree = "<group>"; };
+		53C51B6C29ED4CFC002CE389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53C51B7A29ED5437002CE389 /* Encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Encoder.h; sourceTree = "<group>"; };
+		53C51B7B29ED5437002CE389 /* Encoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Encoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +127,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53C51B5429ED4CFB002CE389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C51B5A29ED4CFB002CE389 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C51B6129ED4CFC002CE389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C51B6529ED4CFC002CE389 /* ReplayKit.framework in Frameworks */,
+				53C51B6729ED4CFC002CE389 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,6 +153,9 @@
 				53C51B1D29ED47B4002CE389 /* testReplayKit */,
 				53C51B3929ED47B6002CE389 /* testReplayKitTests */,
 				53C51B4329ED47B6002CE389 /* testReplayKitUITests */,
+				53C51B5B29ED4CFB002CE389 /* testReplayKitUploadExtension */,
+				53C51B6829ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI */,
+				53C51B5829ED4CFB002CE389 /* Frameworks */,
 				53C51B1C29ED47B4002CE389 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +166,8 @@
 				53C51B1B29ED47B4002CE389 /* testReplayKit.app */,
 				53C51B3629ED47B6002CE389 /* testReplayKitTests.xctest */,
 				53C51B4029ED47B6002CE389 /* testReplayKitUITests.xctest */,
+				53C51B5729ED4CFB002CE389 /* testReplayKitUploadExtension.appex */,
+				53C51B6429ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +207,37 @@
 			path = testReplayKitUITests;
 			sourceTree = "<group>";
 		};
+		53C51B5829ED4CFB002CE389 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53C51B5929ED4CFB002CE389 /* ReplayKit.framework */,
+				53C51B6629ED4CFC002CE389 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53C51B5B29ED4CFB002CE389 /* testReplayKitUploadExtension */ = {
+			isa = PBXGroup;
+			children = (
+				53C51B5C29ED4CFB002CE389 /* SampleHandler.h */,
+				53C51B5D29ED4CFB002CE389 /* SampleHandler.m */,
+				53C51B5F29ED4CFB002CE389 /* Info.plist */,
+				53C51B7A29ED5437002CE389 /* Encoder.h */,
+				53C51B7B29ED5437002CE389 /* Encoder.m */,
+			);
+			path = testReplayKitUploadExtension;
+			sourceTree = "<group>";
+		};
+		53C51B6829ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				53C51B6929ED4CFC002CE389 /* BroadcastSetupViewController.h */,
+				53C51B6A29ED4CFC002CE389 /* BroadcastSetupViewController.m */,
+				53C51B6C29ED4CFC002CE389 /* Info.plist */,
+			);
+			path = testReplayKitUploadExtensionSetupUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +248,13 @@
 				53C51B1729ED47B4002CE389 /* Sources */,
 				53C51B1829ED47B4002CE389 /* Frameworks */,
 				53C51B1929ED47B4002CE389 /* Resources */,
+				53C51B7929ED4CFC002CE389 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				53C51B6E29ED4CFC002CE389 /* PBXTargetDependency */,
+				53C51B7129ED4CFC002CE389 /* PBXTargetDependency */,
 			);
 			name = testReplayKit;
 			productName = testReplayKit;
@@ -192,6 +297,40 @@
 			productReference = 53C51B4029ED47B6002CE389 /* testReplayKitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		53C51B5629ED4CFB002CE389 /* testReplayKitUploadExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53C51B7629ED4CFC002CE389 /* Build configuration list for PBXNativeTarget "testReplayKitUploadExtension" */;
+			buildPhases = (
+				53C51B5329ED4CFB002CE389 /* Sources */,
+				53C51B5429ED4CFB002CE389 /* Frameworks */,
+				53C51B5529ED4CFB002CE389 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testReplayKitUploadExtension;
+			productName = testReplayKitUploadExtension;
+			productReference = 53C51B5729ED4CFB002CE389 /* testReplayKitUploadExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		53C51B6329ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53C51B7329ED4CFC002CE389 /* Build configuration list for PBXNativeTarget "testReplayKitUploadExtensionSetupUI" */;
+			buildPhases = (
+				53C51B6029ED4CFC002CE389 /* Sources */,
+				53C51B6129ED4CFC002CE389 /* Frameworks */,
+				53C51B6229ED4CFC002CE389 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testReplayKitUploadExtensionSetupUI;
+			productName = testReplayKitUploadExtensionSetupUI;
+			productReference = 53C51B6429ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +351,12 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 53C51B1A29ED47B4002CE389;
 					};
+					53C51B5629ED4CFB002CE389 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					53C51B6329ED4CFC002CE389 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = 53C51B1629ED47B4002CE389 /* Build configuration list for PBXProject "testReplayKit" */;
@@ -230,6 +375,8 @@
 				53C51B1A29ED47B4002CE389 /* testReplayKit */,
 				53C51B3529ED47B6002CE389 /* testReplayKitTests */,
 				53C51B3F29ED47B6002CE389 /* testReplayKitUITests */,
+				53C51B5629ED4CFB002CE389 /* testReplayKitUploadExtension */,
+				53C51B6329ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +400,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		53C51B3E29ED47B6002CE389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C51B5529ED4CFB002CE389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C51B6229ED4CFC002CE389 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,6 +451,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53C51B5329ED4CFB002CE389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C51B7C29ED5437002CE389 /* Encoder.m in Sources */,
+				53C51B5E29ED4CFB002CE389 /* SampleHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C51B6029ED4CFC002CE389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C51B6B29ED4CFC002CE389 /* BroadcastSetupViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,6 +480,16 @@
 			isa = PBXTargetDependency;
 			target = 53C51B1A29ED47B4002CE389 /* testReplayKit */;
 			targetProxy = 53C51B4129ED47B6002CE389 /* PBXContainerItemProxy */;
+		};
+		53C51B6E29ED4CFC002CE389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53C51B6329ED4CFC002CE389 /* testReplayKitUploadExtensionSetupUI */;
+			targetProxy = 53C51B6D29ED4CFC002CE389 /* PBXContainerItemProxy */;
+		};
+		53C51B7129ED4CFC002CE389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53C51B5629ED4CFB002CE389 /* testReplayKitUploadExtension */;
+			targetProxy = 53C51B7029ED4CFC002CE389 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -557,6 +745,102 @@
 			};
 			name = Release;
 		};
+		53C51B7429ED4CFC002CE389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 879K89DYGH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = testReplayKitUploadExtensionSetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = testReplayKitUploadExtensionSetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yzzy.testReplayKit.testReplayKitUploadExtensionSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53C51B7529ED4CFC002CE389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 879K89DYGH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = testReplayKitUploadExtensionSetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = testReplayKitUploadExtensionSetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yzzy.testReplayKit.testReplayKitUploadExtensionSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		53C51B7729ED4CFC002CE389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 879K89DYGH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = testReplayKitUploadExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = testReplayKitUploadExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yzzy.testReplayKit.testReplayKitUploadExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53C51B7829ED4CFC002CE389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 879K89DYGH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = testReplayKitUploadExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = testReplayKitUploadExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yzzy.testReplayKit.testReplayKitUploadExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -592,6 +876,24 @@
 			buildConfigurations = (
 				53C51B5129ED47B6002CE389 /* Debug */,
 				53C51B5229ED47B6002CE389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53C51B7329ED4CFC002CE389 /* Build configuration list for PBXNativeTarget "testReplayKitUploadExtensionSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53C51B7429ED4CFC002CE389 /* Debug */,
+				53C51B7529ED4CFC002CE389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53C51B7629ED4CFC002CE389 /* Build configuration list for PBXNativeTarget "testReplayKitUploadExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53C51B7729ED4CFC002CE389 /* Debug */,
+				53C51B7829ED4CFC002CE389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
