@@ -45,6 +45,14 @@
 
 #pragma mark -
 #pragma mark - public methods
+- (BOOL)isEmpty {
+    return self.front == self.rear ? true : false;
+}
+
+- (BOOL)isFull {
+    // 循环数组是否满了
+    return (self.rear + 1) % self.size == self.front ? TRUE : FALSE;
+}
 
 
 #pragma mark -
