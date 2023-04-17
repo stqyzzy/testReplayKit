@@ -8,7 +8,10 @@
 #import "SenderBuffer.h"
 
 @interface SenderBuffer()
-
+@property (nonatomic, assign) NSInteger front;
+@property (nonatomic, assign) NSInteger rear;
+@property (nonatomic, assign) NSInteger size;
+@property (nonatomic, strong) NSMutableArray *array;
 @end
 
 @implementation SenderBuffer
@@ -19,9 +22,12 @@
     NSLog(@"%@ - dealloc", NSStringFromClass([self class]));
 }
 
-- (instancetype)init{
+- (instancetype)initWithSize:(NSInteger)size {
     if (self = [super init]) {
-        [self setup];
+        self.front = 0;
+        self.rear = 0;
+        self.size = size;
+        self.array = [[NSMutableArray alloc] initWithCapacity:size];
     }
     return self;
 }
