@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 #import "SenderBuffer.h"
 // Core Media framework定义了AVFoundation和Apple平台上的其他高级媒体框架使用的媒体管道。使用Core Media的低级数据类型和接口高效处理媒体样本并管理媒体数据队列。
-
+#import <CoreMedia/CoreMedia.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Encoder : NSObject
