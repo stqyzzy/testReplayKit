@@ -7,10 +7,12 @@
 
 
 #import "SampleHandler.h"
+#import "SenderBuffer.h"
 #import "Encoder.h"
 
 // Broadcast Upload Extension是在录制配置界面完成后，在录制期间触发事件回调和录制的音视频数据回调，开发者可以在此回调中处理逻辑。
 @interface SampleHandler ()
+@property (nonatomic, strong) SenderBuffer *senderBuffer;
 @property (nonatomic, strong) Encoder *encoder;
 @end
 
@@ -22,7 +24,7 @@
 - (void)broadcastStartedWithSetupInfo:(NSDictionary<NSString *,NSObject *> *)setupInfo {
     // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional.
     NSInteger bufferSize = 30;
-    
+    [self createSenderBufferWithSize:bufferSize];
     [self initializeEncoder];
 }
 
@@ -66,11 +68,12 @@
 #pragma mark -
 #pragma mark - private methods
 - (void)createSenderBufferWithSize:(NSInteger)bufferSize {
-    
+    self.senderBuffer = [[SenderBuffer alloc] initWithSize:bufferSize];
 }
 
 - (void)initializeEncoder {
     self.encoder = [Encoder new];
+    
 }
 #pragma mark -
 #pragma mark - getters and setters
