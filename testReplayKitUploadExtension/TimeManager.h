@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TimeManager : NSObject
-extern uint64_t init_ts;
+extern uint64_t init_ts; // 初始化时间戳
 extern uint64_t grabber_ts;
 +(instancetype)sharedManager;
 - (uint64_t)getTimestamp;
