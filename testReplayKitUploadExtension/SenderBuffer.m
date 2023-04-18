@@ -54,7 +54,20 @@
     return (self.rear + 1) % self.size == self.front ? TRUE : FALSE;
 }
 
+- (void)enQueue:(Frame *)frame {
+    if (self.array.count < self.size) {
+        [self.array addObject:frame];
+    } else {
+        self.array[self.rear] = frame;
+    }
+    self.rear = (self.rear + 1) % self.size;
+}
 
+- (Frame *)deQueue {
+    Frame *frame = [self.array objectAtIndex:self.front];
+    self.front = (self.front + 1) % self.size;
+    return frame;
+}
 #pragma mark -
 #pragma mark - <#custom#> Delegate
 
