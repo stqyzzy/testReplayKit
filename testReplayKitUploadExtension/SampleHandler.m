@@ -73,7 +73,7 @@
 
 - (void)initializeEncoder {
     self.encoder = [Encoder new];
-    
+    [self.encoder initEncoder:(int)[UIScreen mainScreen].bounds.size.width height:(int)[UIScreen mainScreen].bounds.size.height senderBuffer:self.senderBuffer];
 }
 #pragma mark -
 #pragma mark - getters and setters
