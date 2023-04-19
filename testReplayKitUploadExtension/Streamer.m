@@ -6,9 +6,15 @@
 //
 
 #import "Streamer.h"
+#import "TimeManager.h"
 
 @interface Streamer()
-
+@property (nonatomic, assign) char *watcher_ip;
+@property (nonatomic, assign) int watcher_port;
+@property (nonatomic, strong) SenderBuffer *senderBuffer;
+@property (nonatomic, assign) int fps;
+@property (nonatomic, assign) init period;
+@property (nonatomic, strong) TimeManager *timeManager;
 @end
 
 @implementation Streamer
@@ -39,7 +45,15 @@
 
 #pragma mark -
 #pragma mark - public methods
-
+- (Streamer *)createStreamrWithWatchIP:(char *)ip port:(int)port senderBuffer:(SenderBuffer *)buffer {
+    self.watcher_ip = ip;
+    self.watcher_port = port;
+    self.senderBuffer = buffer;
+    self.fps = 15;
+    self.period = 1000000/ self.fps;
+    self.timeManager = [TimeManager sharedManager];
+    return self;
+}
 
 #pragma mark -
 #pragma mark - <#custom#> Delegate
