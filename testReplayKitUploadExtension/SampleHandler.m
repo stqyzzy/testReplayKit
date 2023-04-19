@@ -9,13 +9,16 @@
 #import "SampleHandler.h"
 #import "SenderBuffer.h"
 #import "Encoder.h"
-
+#import "Streamer.h"
 // Broadcast Upload Extension是在录制配置界面完成后，在录制期间触发事件回调和录制的音视频数据回调，开发者可以在此回调中处理逻辑。
 @interface SampleHandler ()
 @property (nonatomic, strong) SenderBuffer *senderBuffer;
 @property (nonatomic, strong) Encoder *encoder;
+@property (nonatomic, strong) Streamer *streamer;
 @end
-
+char *ip = "172.20.10.14";
+int port = 32000;
+int bufferSize = 30;
 @implementation SampleHandler
 
 #pragma mark -
@@ -26,6 +29,7 @@
     NSInteger bufferSize = 30;
     [self createSenderBufferWithSize:bufferSize];
     [self initializeEncoder];
+    [self createStreamer];
 }
 
 - (void)broadcastPaused {
@@ -77,7 +81,7 @@
 }
 
 - (void)createStreamer {
-    
+    self.streamer = [[Streamer new] createStreamrWithWatchIP:ip port:port senderBuffer:self.senderBuffer];
 }
 #pragma mark -
 #pragma mark - getters and setters
