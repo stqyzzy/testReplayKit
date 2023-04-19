@@ -10,11 +10,14 @@
 #import "SenderBuffer.h"
 #import "Encoder.h"
 #import "Streamer.h"
+#import "TimeManager.h"
 // Broadcast Upload Extension是在录制配置界面完成后，在录制期间触发事件回调和录制的音视频数据回调，开发者可以在此回调中处理逻辑。
 @interface SampleHandler ()
 @property (nonatomic, strong) SenderBuffer *senderBuffer;
 @property (nonatomic, strong) Encoder *encoder;
 @property (nonatomic, strong) Streamer *streamer;
+@property (nonatomic, strong) NSThread *streamerThread;
+@property (nonatomic, strong) TimeManager *timeManager;
 @end
 char *ip = "172.20.10.14";
 int port = 32000;
@@ -30,6 +33,9 @@ int bufferSize = 30;
     [self createSenderBufferWithSize:bufferSize];
     [self initializeEncoder];
     [self createStreamer];
+    [self createStreamerThread];
+    [self startStreamingThread];
+    [self createTimeManager];
 }
 
 - (void)broadcastPaused {
@@ -82,6 +88,22 @@ int bufferSize = 30;
 
 - (void)createStreamer {
     self.streamer = [[Streamer new] createStreamrWithWatchIP:ip port:port senderBuffer:self.senderBuffer];
+}
+
+- (void)createStreamerThread {
+    self.streamerThread = [[NSThread alloc] initWithTarget:self selector:@selector(startStreaming) object:nil];
+}
+
+- (void)startStreamingThread {
+    [self.streamerThread start];
+}
+
+- (void)startStreaming {
+    [self.streamer stream];
+}
+
+- (void)createTimeManager {
+    self.timeManager = [TimeManager sharedManager];
 }
 #pragma mark -
 #pragma mark - getters and setters
