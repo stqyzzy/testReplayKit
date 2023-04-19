@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5320E97529EE6E150019C0DE /* TimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5320E97429EE6E150019C0DE /* TimeManager.m */; };
+		53B9ED9F29EFC2C500629174 /* Streamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B9ED9E29EFC2C500629174 /* Streamer.m */; };
 		53C51B2029ED47B4002CE389 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B1F29ED47B4002CE389 /* AppDelegate.m */; };
 		53C51B2329ED47B4002CE389 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B2229ED47B4002CE389 /* SceneDelegate.m */; };
 		53C51B2629ED47B4002CE389 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C51B2529ED47B4002CE389 /* ViewController.m */; };
@@ -79,6 +80,8 @@
 /* Begin PBXFileReference section */
 		5320E97329EE6E150019C0DE /* TimeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeManager.h; sourceTree = "<group>"; };
 		5320E97429EE6E150019C0DE /* TimeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeManager.m; sourceTree = "<group>"; };
+		53B9ED9D29EFC2C500629174 /* Streamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Streamer.h; sourceTree = "<group>"; };
+		53B9ED9E29EFC2C500629174 /* Streamer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Streamer.m; sourceTree = "<group>"; };
 		53C51B1B29ED47B4002CE389 /* testReplayKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testReplayKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C51B1E29ED47B4002CE389 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		53C51B1F29ED47B4002CE389 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				53C51B8529ED5BED002CE389 /* Frame.m */,
 				5320E97329EE6E150019C0DE /* TimeManager.h */,
 				5320E97429EE6E150019C0DE /* TimeManager.m */,
+				53B9ED9D29EFC2C500629174 /* Streamer.h */,
+				53B9ED9E29EFC2C500629174 /* Streamer.m */,
 			);
 			path = testReplayKitUploadExtension;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				53C51B8629ED5BED002CE389 /* Frame.m in Sources */,
 				5320E97529EE6E150019C0DE /* TimeManager.m in Sources */,
 				53C51B5E29ED4CFB002CE389 /* SampleHandler.m in Sources */,
+				53B9ED9F29EFC2C500629174 /* Streamer.m in Sources */,
 				53C51B8329ED5B03002CE389 /* SenderBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
