@@ -27,7 +27,7 @@ struct packet_header {
     uint32_t magic; // 魔法数
     uint16_t type; // 包的类型
     uint16_t length; // 包的长度，包括header
-}
+};
 
 struct frame_packet {
     struct packet_header hdr; // 包的头部
@@ -41,7 +41,7 @@ struct frame_packet {
     
     uint64_t timestamp;
     char data[0]; // 载荷的指针
-}
+};
 @implementation Streamer
 
 #pragma mark -

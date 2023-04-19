@@ -55,6 +55,7 @@ int bufferSize = 30;
     switch (sampleBufferType) {
         case RPSampleBufferTypeVideo:
             // Handle video sample buffer
+            [self.encoder encode:sampleBuffer];
             break;
         case RPSampleBufferTypeAudioApp:
             // Handle audio sample buffer for app audio
